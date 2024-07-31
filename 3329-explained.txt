@@ -1,0 +1,27 @@
+Xác định các làm khởi đầu:
+-Cho một VECTOR xác định trong đó có 1 hay 2 số 0
+-Xác định index số 0 ở đâu
+-Chỉ ra các số nào gần số 0 nhất nhờ vào index của số 0
+-Dựa vào bên trên xác định số nào lớn nhất
+
+Vô thực nghiệm (giai đoạn đau khổ bắt đầu :( ):
+-Bước 1: tạo 1 vector với data là int (dãy số mà)
+vector<int>arr;
+-Bước 2: tạo một size cố định như int size = 5 hay 4 (tùy)
+-Bước 3: tạo một loop với index là 0 để nhập số với std::cin 
+for (int i = 0; i < size; i++){int i; std::cin >> i; arr.push_back(i);}
+
+Lưu ý: hàm push_back(một số nào đó, hay cm gì đó) thêm số (hay cm gì đấy) ở cuối dãy, cái này là thế gián tiếp qua i ko trực tiếp!
+
+-Bước 4: bước khó, và khái niệm mới (INT_MIN):
+
++ Nhớ hồi dạo đầu có nhắc phải tìm số 0 ko, tạo 1 loop để rà xem có số 0 ko, với điều kiện là ở vị trí đó có số 0 ở vị trí a, thì xung quanh thằng a đó là số gần nhất với 0
+
++ Sử dụng phép toán ++ hay -- để xác định vị trí và số đó
+
++ Khi xác định thành công hãy lập một hàm (nếu không muốn màn hình bị loạn bởi các chữ đầy đủ màu sắc) để so sánh hai số đó 
+
+Lưu ý: các trường hợp khi số 0 ở đầu hay cuối thì sử dụng biến INT_MIN (giới hạn của biến int trong hệ thập phân btw) nếu i bé hơn 0 thì cho thằng đó là INT_MIN còn ngược lại thì cho nó lùi tiếp đây là th nếu 0 ở đầu dãy, còn cuối dãy nếu i lớn size thì quăng cho nó (INT_MIN) còn ngược lại cho nó tiến
+
+(Lưu ý 2 hơi khó hiểu bạn có thể sang arraysAndStrings vào file 3329 để xem và so sánh :3 )
+
